@@ -241,7 +241,6 @@ class Lab01
 			{
 				if (arr[j] > arr[j + 1])
 				{
-					// Zamiana elementów
 					double temp = arr[j];
 					arr[j] = arr[j + 1];
 					arr[j + 1] = temp;
@@ -249,8 +248,6 @@ class Lab01
 					swapped = true;
 				}
 			}
-
-			// Jeśli w danej iteracji nie było zamian, to tablica jest już posortowana
 			if (!swapped) break;
 		}
 	}
