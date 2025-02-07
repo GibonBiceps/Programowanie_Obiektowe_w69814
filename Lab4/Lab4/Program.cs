@@ -33,6 +33,26 @@ namespace Lab4
 			nauczyciel1.WhichStudentCanGoHomeAlone(DateTime.Now);
 			//Zad3
 			Console.WriteLine("--------Zadanie 3--------");
+			List<IOsoba> people = new List<IOsoba>
+			{
+				new Person("Jan", "Kowalski"),
+				new Person("Łominik", "Dukasik"),
+				new Person("Anna", "Nowak"),
+				new StudentWSIIZ("Karol", "Wiśniewski", "IIZ", 2024, 3),
+				new StudentWSIIZ("Gustavo", "Fring", "IIZ", 2024, 5 )
+			};
+			Console.WriteLine("--Przed sortowaniem--");
+			people.WypiszOsoby();
+
+			Console.WriteLine("--Po sortowaniu--");
+			people.PosortujOsobyPoNazwisku();
+			people.WypiszOsoby();
+
+			Console.WriteLine("Studenci WSIiZ: ");
+			foreach(var osoba in people.OfType<StudentWSIIZ>())
+			{
+				Console.WriteLine(osoba.WypiszPelnaNazweIUczelnie());
+			}
 		}
 	}
 }
