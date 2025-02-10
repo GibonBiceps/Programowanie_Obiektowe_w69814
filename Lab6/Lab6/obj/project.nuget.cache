@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rlAckYWk/x0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gibon\\source\\repos\\Lab6\\Lab6\\Lab6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gibon\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
