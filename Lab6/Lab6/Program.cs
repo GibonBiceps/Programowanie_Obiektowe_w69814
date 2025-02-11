@@ -18,7 +18,9 @@ namespace Lab6
 			Zad2.WczytajPlik();
 			//Zad3
 			Console.WriteLine("--------Zadanie 3--------");
-			Zad3.Pesele(); 
+			Zad3.Pesele();
+			Console.WriteLine("--------Zadanie 4--------");
+			Zad4.Populacja();
 		}
 	}
 }
