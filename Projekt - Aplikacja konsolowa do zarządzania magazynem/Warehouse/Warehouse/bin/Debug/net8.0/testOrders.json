@@ -182,7 +182,7 @@
   {
     "OrderID": 16,
     "ProductID": 3,
-    "EmployeeID": 4,
+    "EmployeeID": null,
     "Quantity": 2,
     "Address": "ul. ulicowa 30 39-200 Dębica",
     "ContactName": "Łominik Dukasik",

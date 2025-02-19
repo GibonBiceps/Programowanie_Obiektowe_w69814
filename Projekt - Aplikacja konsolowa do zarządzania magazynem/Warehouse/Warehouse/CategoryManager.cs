@@ -14,10 +14,12 @@ namespace Warehouse
 		{ 
 			IdName = "CategoryID"; 
 		}
+		//autoincrement
 		public int GetId()
 		{
 			return Items.Count > 0 ? Items.Max(c => c.CategoryID) + 1 : 1;
 		}
+		//pętla po wybraniu kategorii
 		public void CategorySelector()
 		{
 			while (true)
@@ -47,6 +49,7 @@ namespace Warehouse
 
 			}
 		}
+		//validacja nazwy
 		private string NameValidation()
 		{
 			string name;
@@ -59,6 +62,7 @@ namespace Warehouse
 			}
 			return name;
 		}
+		//validacja opisu
 		private string DescriptionValidation()
 		{
 			string description;
@@ -71,6 +75,7 @@ namespace Warehouse
 			}
 			return description;
 		}
+		//tworzenie obiektu kategorii na potrzeby innych funkcji
 		private Category GetNewCategory(int categoryID, string name, string description)
 		{
 			return new Category
@@ -80,6 +85,7 @@ namespace Warehouse
 				Description = description
 			};
 		}
+		//tworzenie kategorii
 		private void CategoryCreator()
 		{
 			Console.Clear();
@@ -89,6 +95,7 @@ namespace Warehouse
 			Category newCategory = GetNewCategory(id, name, description);
 			Add(newCategory);
 		}
+		//edytowanie kategorii
 		private void CategoryEditor()
 		{
 			Console.Clear();
@@ -137,6 +144,7 @@ namespace Warehouse
 				Console.WriteLine("Błędna kategoria");
 			}
 		}
+		//usuwanie kategorii
 		private void CategoryRemover()
 		{
 			Console.Clear();
@@ -144,6 +152,7 @@ namespace Warehouse
 			int identificator = NumericValidation("Podaj ID kategorii do usunięcia:");
 			Remove(identificator);
 		}
+		//wypisywanie wszystkich wyników kategorii
 		public void CategoryWrite()
 		{
 			foreach(var item in Items)
@@ -151,6 +160,7 @@ namespace Warehouse
 				ConsoleWriter(item);
 			}
 		}
+		//wyświetlanie wyników
 		private void ConsoleWriter(Category category)
 		{
 			Console.WriteLine($"| {category.CategoryID} | {category.Name} | {category.Description} |");

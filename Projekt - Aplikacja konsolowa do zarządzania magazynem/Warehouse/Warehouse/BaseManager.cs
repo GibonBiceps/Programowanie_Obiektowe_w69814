@@ -17,7 +17,9 @@ namespace Warehouse
 			dataManager = new JsonDataManager<T>(filePath);
 			Items = dataManager.LoadData();
 		}
+		//metoda do przekazywania danych do zapisu do JsonDataManager
 		public void SaveChanges() => dataManager.SaveData(Items);
+		//metoda do wyszukiwania rekordu po id
 		public T GetById(int id)
 		{
 			foreach (var item in Items)
@@ -30,7 +32,7 @@ namespace Warehouse
 			}
 			return default; // Jeśli nie znaleziono
 		}
-
+		//metoda do usuwania rekordu
 		public void Remove(int id)
 		{
 			Items.RemoveAll(item => {
@@ -39,7 +41,7 @@ namespace Warehouse
 			});
 			SaveChanges();
 		}
-
+		//metoda do aktualizacji rekordu
 		public void Update(T updatedItem)
 		{
 			var idProperty = updatedItem.GetType().GetProperty(IdName);
@@ -57,12 +59,13 @@ namespace Warehouse
 				}
 			}
 		}
-
+		//metoda do dodawania nowego rekordu
 		public void Add(T item)
 		{
 			Items.Add(item);
 			SaveChanges();
 		}
+		//metoda do czekania po wypisaniu wyniku (czasami w kodzie istnieje console.clear)
 		protected void Waiter()
 		{
 			Console.ReadLine();
@@ -73,6 +76,7 @@ namespace Warehouse
 			Console.WriteLine("OK?");
 			Console.ReadLine();
 		}
+		//validacja znaków numerycznych
 		public int NumericValidation(string message)
 		{
 			int identificator;
@@ -88,6 +92,7 @@ namespace Warehouse
 			}
 			return identificator;
 		}
+		//zamiana wyświetlanych nazw które w tabeli zapisane są po angielsku
 		public string EngParser(string message)
 		{
 			if (message == "Pending")

@@ -162,7 +162,7 @@ namespace Warehouse
 			int? employeeID;
 			while (true)
 			{
-				Console.WriteLine("Wybierz pracownika z powyższej listy lub x (null):");
+				Console.WriteLine("Wybierz pracownika z powyższej listy lub x (null):"); //wybieranie pracownika z innej tabeli
 				string pracownik = Console.ReadLine();
 				int result;
 				if (pracownik == "x")
@@ -214,13 +214,13 @@ namespace Warehouse
 						if (orderStatus == "Pending" || orderStatus == "Accepted" || orderStatus == "Completed" || orderStatus == "Canceled") break;
 						Console.WriteLine("Status zamówienia musi być jednym z: 'Pending', 'Accepted', 'Completed', 'Canceled'.");
 					}
-					if (editOrder.OrderStatus == "Completed" && orderStatus != "Completed" && editOrder.OrderType != "IN")
+					if (editOrder.OrderStatus == "Completed" && orderStatus != "Completed" && editOrder.OrderType != "IN") //dodawanie ilości do rekordu w tabeli produkty
 					{
 						var productQuantity = ProgramSettings.productManager.GetById(editOrder.ProductID);
 						productQuantity.QuantityInStock += editOrder.Quantity;
 						ProgramSettings.productManager.Update(productQuantity);
 					}
-					if (editOrder.OrderStatus != "Completed" && orderStatus == "Completed" && editOrder.OrderType != "IN")
+					if (editOrder.OrderStatus != "Completed" && orderStatus == "Completed" && editOrder.OrderType != "IN") //usuwanie ilości z rekordu tabeli produkty
 					{
 						var productQuantity = ProgramSettings.productManager.GetById(editOrder.ProductID);
 						if (productQuantity.QuantityInStock < editOrder.Quantity)
@@ -284,18 +284,18 @@ namespace Warehouse
 		// Wypisywanie szczegółów zamówienia
 		private void ConsoleWriter(Order order)
 		{
-			var productWrite = ProgramSettings.productManager.GetById(order.ProductID);
+			var productWrite = ProgramSettings.productManager.GetById(order.ProductID); //pobieranie szczegółów z inneych tabel
 			var employeeWrite = ProgramSettings.employeeManager.GetById(order.EmployeeID ?? 0);
 			var orderProduct = $"{order.ProductID}";
 			var orderEmployee = $"{order.EmployeeID}";
 
-			if (productWrite != default)
+			if (productWrite != default) //co jeżeli nie znajdzie rekordu o podanym id
 				orderProduct = productWrite.Name;
 
-			if (employeeWrite != default && order.EmployeeID != null)
+			if (employeeWrite != default && order.EmployeeID != null) 
 				orderEmployee = employeeWrite.FirstName + " " + employeeWrite.LastName;
 			else 
-				orderEmployee = "Brak.";
+				orderEmployee = "Brak."; //co w przypadku null
 
 			Console.WriteLine($"| {order.OrderID} | {orderProduct} | {orderEmployee} | {order.Quantity} | {order.Address} | {order.ContactName} | " +
 				$"{order.Phone} | {EngParser(order.OrderType)} | {EngParser(order.OrderStatus)} | {order.OrderDate.ToString()} |");

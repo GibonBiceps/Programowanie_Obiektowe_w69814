@@ -12,12 +12,12 @@ namespace Warehouse
 		{
 			IdName = "ProductID";
 		}
-
+		//autoincrement
 		public int GetId()
 		{
 			return Items.Count > 0 ? Items.Max(p => p.ProductID) + 1 : 1;
 		}
-
+		//pętla do wybierania opcji odnośnie tabeli produkty
 		public void ProductSelector()
 		{
 			while (true)
@@ -58,7 +58,7 @@ namespace Warehouse
 					break;
 			}
 		}
-
+		//walidacja nazwy
 		private string NameValidation()
 		{
 			string name;
@@ -71,7 +71,7 @@ namespace Warehouse
 			}
 			return name;
 		}
-
+		//walidacja ilości
 		private int QuantityValidation()
 		{
 			int quantity;
@@ -83,7 +83,7 @@ namespace Warehouse
 			}
 			return quantity;
 		}
-
+		//walidacja ceny
 		private decimal PriceValidation()
 		{
 			decimal price;
@@ -95,7 +95,7 @@ namespace Warehouse
 			}
 			return price;
 		}
-
+		//walidacja kodu kreskowego (13 cyfr)
 		private string BarcodeValidation()
 		{
 			string barcode;
@@ -108,7 +108,7 @@ namespace Warehouse
 			}
 			return barcode;
 		}
-
+		//tworzenie obiektu produktu na potrzeby innych metod
 		private Product GetNewProduct(int productID, string name, int categoryID, int supplierID, int quantityInStock, decimal price, string barcode)
 		{
 			return new Product
@@ -122,6 +122,7 @@ namespace Warehouse
 				Barcode = barcode
 			};
 		}
+		//walidacja kategorii (wymaga sprawdzenia w innej tabeli)
 		private int CategoryValidation()
 		{
 			ProgramSettings.categoryManager.CategoryWrite();
@@ -144,6 +145,7 @@ namespace Warehouse
 			}
 			return categoryID;
 		}
+		//walidacja dostawcy (wymaga sprawdzenia w innej tabeli)
 		private int SupplierValidation()
 		{
 			ProgramSettings.supplierManager.SupplierWrite();
@@ -166,6 +168,7 @@ namespace Warehouse
 			}
 			return supplierID;
 		}
+		//tworzenie produktu w bazie
 		private void ProductCreator()
 		{
 			Console.Clear();
@@ -180,7 +183,7 @@ namespace Warehouse
 			Product newProduct = GetNewProduct(id, name, categoryID, supplierID, quantityInStock, price, barcode);
 			Add(newProduct);
 		}
-
+		//edycja produktu
 		private void ProductEditor()
 		{
 			Console.Clear();
@@ -251,7 +254,7 @@ namespace Warehouse
 				Console.WriteLine("Błędne ID produktu.");
 			}
 		}
-
+		//usuwanie produktu
 		private void ProductRemover()
 		{
 			Console.Clear();
@@ -259,7 +262,7 @@ namespace Warehouse
 			int identificator = NumericValidation("Podaj ID produktu do usunięcia:");
 			Remove(identificator);
 		}
-
+		//wypisywanie wszystkich produktów
 		public void ProductWrite()
 		{
 			foreach (var item in Items)
@@ -267,14 +270,15 @@ namespace Warehouse
 				ConsoleWriter(item);
 			}
 		}
+		//sposób wypisywania
 		private void ConsoleWriter(Product product)
 		{
-			var categoryWrite = ProgramSettings.categoryManager.GetById(product.CategoryID);
+			var categoryWrite = ProgramSettings.categoryManager.GetById(product.CategoryID); //wczytywanie danych z innych tabel
 			var supplierWrite = ProgramSettings.supplierManager.GetById(product.SupplierID);
 			var productCategory = $"{product.CategoryID}";
 			var productSupplier = $"{product.SupplierID}";
 			if (categoryWrite != default)
-				productCategory = categoryWrite.Name;
+				productCategory = categoryWrite.Name; // jeżeli dane zostaną usunięte z innej tabeli to wczyta numer
 			if (supplierWrite != default)
 				productSupplier = supplierWrite.Name;
 

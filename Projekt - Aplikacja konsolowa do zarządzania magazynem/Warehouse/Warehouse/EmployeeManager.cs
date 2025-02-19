@@ -12,12 +12,12 @@ namespace Warehouse
 		{
 			IdName = "EmployeeID";
 		}
-
+		//autoincrement
 		public int GetId()
 		{
 			return Items.Count > 0 ? Items.Max(e => e.EmployeeID) + 1 : 1;
 		}
-
+		//pętla do wybierania metod pracownika
 		public void EmployeeSelector()
 		{
 			while (true)
@@ -47,7 +47,7 @@ namespace Warehouse
 					break;
 			}
 		}
-
+		//walidacja imienia
 		private string FirstNameValidation()
 		{
 			string firstName;
@@ -60,7 +60,7 @@ namespace Warehouse
 			}
 			return firstName;
 		}
-
+		//walidacja nazwiska
 		private string LastNameValidation()
 		{
 			string lastName;
@@ -73,7 +73,7 @@ namespace Warehouse
 			}
 			return lastName;
 		}
-
+		//walidacja maila
 		private string EmailValidation()
 		{
 			string email;
@@ -86,7 +86,7 @@ namespace Warehouse
 			}
 			return email;
 		}
-
+		//walidacja telefonu
 		private string PhoneValidation()
 		{
 			string phone;
@@ -99,7 +99,7 @@ namespace Warehouse
 			}
 			return phone;
 		}
-
+		//walidacja stanowiska
 		private string PositionValidation()
 		{
 			string position;
@@ -112,7 +112,7 @@ namespace Warehouse
 			}
 			return position;
 		}
-
+		//tworzenie obiektu pracownika na potrzeby innych metod
 		private Employee GetNewEmployee(int employeeID, string firstName, string lastName, string email, string phone, string position)
 		{
 			return new Employee
@@ -125,7 +125,7 @@ namespace Warehouse
 				Position = position
 			};
 		}
-
+		//tworzenie nowego pracownika w tabeli
 		private void EmployeeCreator()
 		{
 			Console.Clear();
@@ -139,7 +139,7 @@ namespace Warehouse
 			Employee newEmployee = GetNewEmployee(id, firstName, lastName, email, phone, position);
 			Add(newEmployee);
 		}
-
+		//edycja pracownika
 		private void EmployeeEditor()
 		{
 			Console.Clear();
@@ -216,7 +216,7 @@ namespace Warehouse
 				Console.WriteLine("Błędne ID pracownika.");
 			}
 		}
-
+		//usuwanie pracownika
 		private void EmployeeRemover()
 		{
 			Console.Clear();
@@ -224,7 +224,7 @@ namespace Warehouse
 			int identificator = NumericValidation("Podaj ID pracownika do usunięcia:");
 			Remove(identificator);
 		}
-
+		// wypisywanie pracowników
 		public void EmployeeWrite()
 		{
 			foreach (var item in Items)
@@ -232,7 +232,7 @@ namespace Warehouse
 				ConsoleWriter(item);
 			}
 		}
-
+		//sposób wypisywania
 		private void ConsoleWriter(Employee employee)
 		{
 			Console.WriteLine($"| {employee.EmployeeID} | {employee.FirstName} | {employee.LastName} | {employee.Email} | {employee.Phone} | {employee.Position} |");

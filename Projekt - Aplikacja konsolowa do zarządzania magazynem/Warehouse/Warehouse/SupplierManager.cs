@@ -13,12 +13,12 @@ namespace Warehouse
 		{
 			IdName = "SupplierID";
 		}
-
+		//autoincrement
 		public int GetId()
 		{
 			return Items.Count > 0 ? Items.Max(s => s.SupplierID) + 1 : 1;
 		}
-
+		//pętla wybierania opcji
 		public void SupplierSelector()
 		{
 			while (true)
@@ -48,7 +48,7 @@ namespace Warehouse
 					break;
 			}
 		}
-
+		//walidacja nazwy
 		private string NameValidation()
 		{
 			string name;
@@ -61,7 +61,7 @@ namespace Warehouse
 			}
 			return name;
 		}
-
+		//walidacja nazwy kontaktowej
 		private string ContactNameValidation()
 		{
 			
@@ -75,7 +75,7 @@ namespace Warehouse
 			}
 			return name;
 		}
-
+		//walidacja telefonu
 		private string PhoneValidation()
 		{
 			string phone;
@@ -88,7 +88,7 @@ namespace Warehouse
 			}
 			return phone;
 		}
-
+		//validacja adresu
 		private string AddressValidation()
 		{
 			string adress;
@@ -101,7 +101,7 @@ namespace Warehouse
 			}
 			return adress;
 		}
-
+		//tworzenie obiektu dostawcy na potrzeby innych metod
 		private Supplier GetNewSupplier(int supplierID, string name, string contactName, string phone, string address)
 		{
 			return new Supplier
@@ -113,7 +113,7 @@ namespace Warehouse
 				Address = address
 			};
 		}
-
+		//tworzenie nowego dostawcy
 		private void SupplierCreator()
 		{
 			Console.Clear();
@@ -126,7 +126,7 @@ namespace Warehouse
 			Supplier newSupplier = GetNewSupplier(id, name, contactName, phone, address);
 			Add(newSupplier);
 		}
-
+		//edycja dostawcy
 		private void SupplierEditor()
 		{
 			Console.Clear();
@@ -187,7 +187,7 @@ namespace Warehouse
 				Console.WriteLine("Błędny dostawca.");
 			}
 		}
-
+		//usuwanie dostawcy
 		private void SupplierRemover()
 		{
 			Console.Clear();
@@ -195,7 +195,7 @@ namespace Warehouse
 			int identificator = NumericValidation("Podaj ID dostawcy do usunięcia:");
 			Remove(identificator);
 		}
-
+		//wypisywanie dostawców
 		public void SupplierWrite()
 		{
 			foreach (var item in Items)
@@ -203,7 +203,7 @@ namespace Warehouse
 				ConsoleWriter(item);
 			}
 		}
-
+		//sposów wypisywania
 		private void ConsoleWriter(Supplier supplier)
 		{
 			Console.WriteLine($"| {supplier.SupplierID} | {supplier.Name} | {supplier.ContactName} | {supplier.Phone} | {supplier.Address} |");
