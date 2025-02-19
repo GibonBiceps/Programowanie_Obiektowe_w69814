@@ -1,0 +1,27 @@
+[
+    {
+        "CategoryID": 1,
+        "Name": "Białko",
+        "Description": "Odżywki białkowe dla sportowców"
+    },
+    {
+        "CategoryID": 2,
+        "Name": "Kreatyna",
+        "Description": "Suplementy wspomagające siłę i masę mięśniową"
+    },
+    {
+        "CategoryID": 3,
+        "Name": "Aminokwasy",
+        "Description": "BCAA i EAA wspomagające regenerację"
+    },
+    {
+        "CategoryID": 4,
+        "Name": "Witaminy i minerały",
+        "Description": "Suplementy wspierające zdrowie i odporność"
+    },
+    {
+        "CategoryID": 5,
+        "Name": "Przedtreningówki",
+        "Description": "Preparaty zwiększające wydolność i koncentrację"
+    }
+]

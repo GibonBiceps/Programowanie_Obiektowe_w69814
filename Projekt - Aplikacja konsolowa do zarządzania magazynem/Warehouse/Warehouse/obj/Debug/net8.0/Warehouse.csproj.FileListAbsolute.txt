@@ -1,0 +1,17 @@
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\bin\Debug\net8.0\Warehouse.exe
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\bin\Debug\net8.0\Warehouse.deps.json
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\bin\Debug\net8.0\Warehouse.runtimeconfig.json
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\bin\Debug\net8.0\Warehouse.dll
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\bin\Debug\net8.0\Warehouse.pdb
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.csproj.AssemblyReference.cache
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.AssemblyInfoInputs.cache
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.AssemblyInfo.cs
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.csproj.CoreCompileInputs.cache
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.csproj.Up2Date
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.dll
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\refint\Warehouse.dll
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.pdb
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\Warehouse.genruntimeconfig.cache
+C:\Users\Gibon\source\repos\Warehouse\Warehouse\obj\Debug\net8.0\ref\Warehouse.dll

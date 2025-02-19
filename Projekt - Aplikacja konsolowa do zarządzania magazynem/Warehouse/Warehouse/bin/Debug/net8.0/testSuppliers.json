@@ -1,0 +1,37 @@
+[
+    {
+        "SupplierID": 1,
+        "Name": "Sport Nutrition Sp. z o.o.",
+        "ContactName": "Jan Kowalski",
+        "Phone": "123-456-789",
+        "Address": "ul. Sportowa 10, Warszawa"
+    },
+    {
+        "SupplierID": 2,
+        "Name": "Fit Supplements",
+        "ContactName": "Anna Nowak",
+        "Phone": "987-654-321",
+        "Address": "ul. Zdrowa 5, Kraków"
+    },
+    {
+        "SupplierID": 3,
+        "Name": "Muscle Power",
+        "ContactName": "Piotr Wiśniewski",
+        "Phone": "564-789-123",
+        "Address": "ul. Siłowa 3, Wrocław"
+    },
+    {
+        "SupplierID": 4,
+        "Name": "VitaMax",
+        "ContactName": "Katarzyna Zielińska",
+        "Phone": "678-345-890",
+        "Address": "ul. Mineralna 7, Gdańsk"
+    },
+    {
+        "SupplierID": 5,
+        "Name": "Extreme Boost",
+        "ContactName": "Marek Lis",
+        "Phone": "890-123-456",
+        "Address": "ul. Energetyczna 2, Poznań"
+    }
+]

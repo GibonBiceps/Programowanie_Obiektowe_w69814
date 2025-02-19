@@ -1,0 +1,137 @@
+[
+    {
+        "ProductID": 1,
+        "Name": "Białko serwatkowe 2kg",
+        "CategoryID": 1,
+        "SupplierID": 1,
+        "QuantityInStock": 50,
+        "Price": 150.00,
+        "Barcode": "5901234123457"
+    },
+    {
+        "ProductID": 2,
+        "Name": "Białko kazeinowe 1,8kg",
+        "CategoryID": 1,
+        "SupplierID": 1,
+        "QuantityInStock": 40,
+        "Price": 170.00,
+        "Barcode": "5901234123464"
+    },
+    {
+        "ProductID": 3,
+        "Name": "Izolat białka 2kg",
+        "CategoryID": 1,
+        "SupplierID": 1,
+        "QuantityInStock": 35,
+        "Price": 180.00,
+        "Barcode": "5901234123471"
+    },
+    {
+        "ProductID": 4,
+        "Name": "Kreatyna monohydrat 500g",
+        "CategoryID": 2,
+        "SupplierID": 2,
+        "QuantityInStock": 60,
+        "Price": 80.00,
+        "Barcode": "5901234123488"
+    },
+    {
+        "ProductID": 5,
+        "Name": "Kreatyna jabłczan 300g",
+        "CategoryID": 2,
+        "SupplierID": 2,
+        "QuantityInStock": 50,
+        "Price": 90.00,
+        "Barcode": "5901234123495"
+    },
+    {
+        "ProductID": 6,
+        "Name": "Kreatyna stack 400g",
+        "CategoryID": 2,
+        "SupplierID": 2,
+        "QuantityInStock": 30,
+        "Price": 110.00,
+        "Barcode": "5901234123501"
+    },
+    {
+        "ProductID": 7,
+        "Name": "BCAA 500g",
+        "CategoryID": 3,
+        "SupplierID": 3,
+        "QuantityInStock": 70,
+        "Price": 120.00,
+        "Barcode": "5901234123518"
+    },
+    {
+        "ProductID": 8,
+        "Name": "EAA 400g",
+        "CategoryID": 3,
+        "SupplierID": 3,
+        "QuantityInStock": 65,
+        "Price": 130.00,
+        "Barcode": "5901234123525"
+    },
+    {
+        "ProductID": 9,
+        "Name": "Glutamina 600g",
+        "CategoryID": 3,
+        "SupplierID": 3,
+        "QuantityInStock": 55,
+        "Price": 100.00,
+        "Barcode": "5901234123532"
+    },
+    {
+        "ProductID": 10,
+        "Name": "Magnez + Potas 90 kaps.",
+        "CategoryID": 4,
+        "SupplierID": 4,
+        "QuantityInStock": 80,
+        "Price": 40.00,
+        "Barcode": "5901234123549"
+    },
+    {
+        "ProductID": 11,
+        "Name": "Witamina D3 + K2 120 kaps.",
+        "CategoryID": 4,
+        "SupplierID": 4,
+        "QuantityInStock": 90,
+        "Price": 50.00,
+        "Barcode": "5901234123556"
+    },
+    {
+        "ProductID": 12,
+        "Name": "ZMA 100 kaps.",
+        "CategoryID": 4,
+        "SupplierID": 4,
+        "QuantityInStock": 60,
+        "Price": 60.00,
+        "Barcode": "5901234123563"
+    },
+    {
+        "ProductID": 13,
+        "Name": "Przedtreningówka Hardcore 300g",
+        "CategoryID": 5,
+        "SupplierID": 5,
+        "QuantityInStock": 75,
+        "Price": 130.00,
+        "Barcode": "5901234123570"
+    },
+    {
+        "ProductID": 14,
+        "Name": "Przedtreningówka Extreme 250g",
+        "CategoryID": 5,
+        "SupplierID": 5,
+        "QuantityInStock": 65,
+        "Price": 140.00,
+        "Barcode": "5901234123587"
+    },
+    {
+        "ProductID": 15,
+        "Name": "Booster tlenku azotu 200g",
+        "CategoryID": 5,
+        "SupplierID": 5,
+        "QuantityInStock": 40,
+        "Price": 100.00,
+        "Barcode": "5901234123594"
+    }
+]

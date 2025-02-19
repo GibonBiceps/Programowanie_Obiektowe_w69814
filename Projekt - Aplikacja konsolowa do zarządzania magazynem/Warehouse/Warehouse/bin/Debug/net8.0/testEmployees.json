@@ -1,0 +1,50 @@
+[
+    {
+        "EmployeeID": 1,
+        "FirstName": "Jan",
+        "LastName": "Kowalski",
+        "Email": "jan.kowalski@gigachader.com",
+        "Phone": "600123456",
+        "Position": "Magazynier"
+    },
+    {
+        "EmployeeID": 2,
+        "FirstName": "Anna",
+        "LastName": "Nowak",
+        "Email": "anna.nowak@gigachader.com",
+        "Phone": "601234567",
+        "Position": "Kierownik magazynu"
+    },
+    {
+        "EmployeeID": 3,
+        "FirstName": "Piotr",
+        "LastName": "Wiśniewski",
+        "Email": "piotr.wisniewski@gigachader.com",
+        "Phone": "602345678",
+        "Position": "Pracownik logistyki"
+    },
+    {
+        "EmployeeID": 4,
+        "FirstName": "Katarzyna",
+        "LastName": "Zielińska",
+        "Email": "katarzyna.zielinska@gigachader.com",
+        "Phone": "603456789",
+        "Position": "Magazynier"
+    },
+    {
+        "EmployeeID": 5,
+        "FirstName": "Marek",
+        "LastName": "Lis",
+        "Email": "marek.lis@gigachader.com",
+        "Phone": "604567890",
+        "Position": "Specjalista ds. dostaw"
+    },
+    {
+        "EmployeeID": 6,
+        "FirstName": "Magdalena",
+        "LastName": "Wójcik",
+        "Email": "magdalena.wojcik@gigachader.com",
+        "Phone": "605678901",
+        "Position": "Pracownik magazynu"
+    }
+]

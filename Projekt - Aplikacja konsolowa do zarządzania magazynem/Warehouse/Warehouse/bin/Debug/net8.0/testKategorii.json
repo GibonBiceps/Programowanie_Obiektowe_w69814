@@ -1,0 +1,17 @@
+[
+  {
+    "CategoryID": 1,
+    "Name": "ddd",
+    "Description": "test"
+  },
+  {
+    "CategoryID": 2,
+    "Name": "342",
+    "Description": "test"
+  },
+  {
+    "CategoryID": 3,
+    "Name": "test4",
+    "Description": ""
+  }
+]
