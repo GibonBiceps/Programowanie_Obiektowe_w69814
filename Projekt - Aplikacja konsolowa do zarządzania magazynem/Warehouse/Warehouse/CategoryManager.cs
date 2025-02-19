@@ -27,8 +27,8 @@ namespace Warehouse
 				Console.WriteLine("1. Wypisz");
 				Console.WriteLine("2. Dodaj");
 				Console.WriteLine("3. Edytuj");
-				Console.WriteLine("x - Powrót");
 				Console.WriteLine("4. Usuń");
+				Console.WriteLine("x - Powrót");
 				string selection = Console.ReadLine();
 				if (selection == "1")
 				{

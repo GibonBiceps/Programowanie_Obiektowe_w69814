@@ -13,11 +13,6 @@ namespace Warehouse
 		{
 			while (true)
 			{
-				CategoryManager categoryManager = new CategoryManager(ProgramSettings.categoryJSON);
-				SupplierManager supplierManager = new SupplierManager(ProgramSettings.supplierJSON);
-
-				EmployeeManager employeeManager = new EmployeeManager(ProgramSettings.employeeJSON);
-				OrderManager orderManager = new OrderManager(ProgramSettings.orderJSON);
 				Console.Clear();
 				Console.WriteLine("Program do zarządzania magazynem");
 				Console.WriteLine("1 - Kategorie");
@@ -28,15 +23,15 @@ namespace Warehouse
 				Console.WriteLine("x - Wyjście");
 				string selectedOption = Console.ReadLine();
 				if (selectedOption == "1")
-					categoryManager.CategorySelector();
+					ProgramSettings.categoryManager.CategorySelector();
 				else if (selectedOption == "2")
-					supplierManager.SupplierSelector();
+					ProgramSettings.supplierManager.SupplierSelector();
 				else if (selectedOption == "3")
 					ProgramSettings.productManager.ProductSelector();
 				else if (selectedOption == "4")
-					employeeManager.EmployeeSelector();
+					ProgramSettings.employeeManager.EmployeeSelector();
 				else if (selectedOption == "5")
-					orderManager.OrderSelector();
+					ProgramSettings.orderManager.OrderSelector();
 				else if (selectedOption == "x")
 					break;
 			}

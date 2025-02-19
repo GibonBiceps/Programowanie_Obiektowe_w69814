@@ -58,7 +58,6 @@ namespace Warehouse
 		// Walidacja dla ProductID
 		private int ProductIDValidation()
 		{
-			Console.Clear();
 			ProgramSettings.productManager.ProductWrite();
 			int productID;
 			while (true)
@@ -156,10 +155,9 @@ namespace Warehouse
 		{
 			Console.Clear();
 			OrderWrite();
-			int identificator = NumericValidation("Wybierz ID zamówienia do edyji:");
+			int identificator = NumericValidation("Wybierz ID zamówienia do edycji:");
 			Order editOrder = GetById(identificator);
 
-			Console.Clear();
 			ProgramSettings.employeeManager.EmployeeWrite();
 			int? employeeID;
 			while (true)

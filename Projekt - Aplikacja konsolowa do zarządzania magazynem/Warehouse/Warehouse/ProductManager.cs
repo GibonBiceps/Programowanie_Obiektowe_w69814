@@ -124,7 +124,6 @@ namespace Warehouse
 		}
 		private int CategoryValidation()
 		{
-			Console.Clear();
 			ProgramSettings.categoryManager.CategoryWrite();
 			int categoryID;
 			while(true)
@@ -147,7 +146,6 @@ namespace Warehouse
 		}
 		private int SupplierValidation()
 		{
-			Console.Clear();
 			ProgramSettings.supplierManager.SupplierWrite();
 			int supplierID;
 			while (true)
